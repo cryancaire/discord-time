@@ -1,0 +1,133 @@
+:root {
+    --main-bg-color: #23272A;
+    --main-font-color: white;
+    --main-border-color: #2C2F33;
+    --secondary-bg-color: #5865F2;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: var(--main-font-color)
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+}
+
+.container {
+    margin-top: 2em;
+    border: 3px solid var(--main-border-color);
+    height: fit-content;
+    border-radius: 0.5em;
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.date-time-picker-container label,
+.date-time-picker-container input
+ {
+    font-size: 2em;
+}
+
+.date-time-picker-container,
+.tz-picker-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.date-time-picker {
+    padding: 0.25em;
+    margin:0;
+    height: 2em;
+    width: 13em;
+    border-radius: 0.5em;
+    background-color: var(--main-bg-color);
+    border: 3px solid var(--main-border-color)
+}
+
+.whole-time-picker-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.dropdown-container span {
+    font-size: 2em;
+}
+
+.dropdown-container .form-select {
+    background-size: 32px 24px;
+    line-height: 1;
+    color: var(--main-font-color);
+    font-size: 2em;
+    padding: 0.25em;
+    margin:0;
+    height: 2em;
+    width: 15em;
+    border-radius: 0.5em;
+    background-color: var(--main-bg-color);
+    border: 3px solid var(--main-border-color)
+}
+
+
+.style-selector-container .form-select {
+ width: 10em;
+}
+
+.result-pane {
+    margin-top: 2em;
+    font-size: 2em;
+    width: 50%;
+    min-width: fit-content;
+    display: none;
+}
+
+.result-pane.show {
+    display:block;
+}
+
+.result-pane .result-input {
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    padding: 0.25em;
+    margin:0;
+    height: 2em;
+    width: 100%;
+    border-radius: 0.5em;
+    background-color: var(--main-bg-color);
+    border: 3px solid var(--main-border-color)
+}
+
+.flash {
+    animation: flash 300ms ease-in-out;
+}
+
+@keyframes flash {
+    25% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
